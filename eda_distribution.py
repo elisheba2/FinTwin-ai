@@ -5,7 +5,7 @@ import seaborn as sns
 # ---------------------------------------------
 # Load the cleaned dataset (Excel file)
 # ---------------------------------------------
-df = pd.read_csv(r'C:\Users\HP\Desktop\FinTwin-ai\Financial_Health_Digital_Twin.csv.xls')  # replace with the actual file name
+df = pd.read_csv(r'C:\Users\HP\Desktop\FinTwin-ai\clean_financial_health_dataset.csv')  # replace with the actual file name
 
 # ---------------------------------------------
 # 1. Summary Statistics
@@ -14,6 +14,7 @@ key_vars = ['Monthly_Income', 'Monthly_Expenses', 'Monthly_Savings',
             'Loan_Amount', 'Debt_to_Income_Ratio', 'Savings_Rate']
 
 print("Summary Statistics:")
+print(df.columns.tolist())
 print(df[key_vars].describe())
 
 # ---------------------------------------------
